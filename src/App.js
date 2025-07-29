@@ -3,7 +3,7 @@ import BookCreate from "./components/BookCreate";
 import BookList from "./components/BookList";
 
 function App() {
-  const [book, setBooks] = useState([]);
+  const [books, setBooks] = useState([]);
 
   const createBook = (title) => {
     const updatedBooks = [
