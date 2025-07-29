@@ -7,7 +7,7 @@ function App() {
 
   const createBook = (title) => {
     const updatedBooks = [
-      ...BookShow,
+      ...books,
       { id: Math.random(Math.random() * 9999), title },
     ];
     setBooks(updatedBooks);
