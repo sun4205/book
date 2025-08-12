@@ -11,7 +11,7 @@ function Provider({ children }) {
     setBooks(response.data);
   };
 
-  const editBookById = useCallback(async (id, newTitle) => {
+  const editBookById = async (id, newTitle) => {
     const response = await axios.put(`http://localhost:3001/books/${id}`, {
       title: newTitle,
     });
@@ -23,7 +23,7 @@ function Provider({ children }) {
       return book;
     });
     setBooks(updatedBooks);
-  }, []);
+  };
 
   const deleteBookById = async (id) => {
     await axios.delete(`http://localhost:3001/books/${id}`);
